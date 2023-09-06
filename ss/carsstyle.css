@@ -1,0 +1,111 @@
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: #f39c12;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    display: inline-block;
+    margin: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+}
+
+h2 {
+    color: #f39c12;
+    margin-top: 20px;
+}
+
+ul {
+    margin-left: 30px;
+}
+
+span.price {
+    color: green;
+}
+@keyframes fadeInUp {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+@keyframes fadeInLeft {
+from {
+opacity: 0;
+transform: translateX(-20px);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+table,li {
+    animation: fadeIn 5s ease-in-out;
+}
+.image-container {
+    width: 80%;
+    overflow: hidden;
+}
+
+.scroll-images {
+    display: flex;
+    animation: scrollImages 25s linear infinite;
+}
+
+.scroll-images img {
+    width: 1000%;
+    height: auto;
+}
+
+@keyframes scrollImages {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

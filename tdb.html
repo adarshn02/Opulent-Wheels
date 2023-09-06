@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Drive Booking</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+
+ <style>
+        body {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #f39c12;
+            margin-top: 30px;
+        }
+
+        h2 {
+            color: #f39c12	;
+            margin-top: 20px;
+	    text-align:center;
+        }
+
+        p {
+            text-align: center;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #f39c12;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006666;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin-top: 30px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body style="background-color:#fff;">
+    <h1>Test Drive Booking</h1>
+    <p>Book a test drive for your preferred car model today! Fill out the form below, and we will contact you to confirm
+        the appointment.</p>
+
+    <h2>Car Details</h2>
+    <form>
+        <label for="car_make">Car Make:</label>
+        <input type="text" id="car_make" name="car_make" required><br><br>
+
+        <label for="car_model">Car Model:</label>
+        <input type="text" id="car_model" name="car_model" required><br><br>
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" name="year" min="1900" max="2099" required><br><br>
+
+        <label for="preferred_date">Preferred Date:</label>
+        <input type="date" id="preferred_date" name="preferred_date" required><br><br>
+
+        <label for="preferred_time">Preferred Time:</label>
+        <input type="time" id="preferred_time" name="preferred_time" required><br><br>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <input type="submit" value="Book Test Drive">
+    </form>
+
+    <hr>
+    <p>&copy; 2023 Opulent Wheels. All rights reserved.</p>
+</body>
+
+</html>

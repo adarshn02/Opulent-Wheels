@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Opulent Wheels Inventory</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+
+    <style>
+        body {
+            background-color: #fff;
+            color: #000;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #f39c12;
+        }
+
+        p {
+            padding: 10px;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        li:hover {
+            background-color: #e0e0e0;
+        }
+
+        select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Opulent Wheels Inventory</h1>
+
+    <label for="carType">Select Car Type:</label>
+    <select id="carType">
+        <option value="sedan">Sedan</option>
+        <option value="suv">SUV</option>
+        <option value="sports">Sports Car</option>
+    </select>
+
+    <ul id="carList">
+        <!-- Cars will be dynamically added here based on the selected type -->
+    </ul>
+
+    <script>
+        const carTypeSelect = document.getElementById('carType');
+        const carList = document.getElementById('carList');
+
+        // Define car data
+        const carsData = {
+            sedan: [
+                { model: 'Audi RS5', description: 'Luxury and performance with advanced features and a powerful engine.', price: '$75,000', link: "sedan/sedan.html" },
+                { model: 'BMW M5', description: 'Luxury and performance with advanced features and a powerful engine.', price: '$70,000', link: 'sedan/sedan1.html' },
+                { model: 'Lexus ES', description: 'Luxury and performance with advanced features and a powerful engine.', price: '$40,000', link: 'sedan/sedan2.html' },
+                { model: 'Jaguar XF', description: 'Luxury and performance with advanced features and a powerful engine.', price: '$51,000', link: 'sedan/sedan3.html' }
+            ],
+            suv: [
+                { model: 'Aston Martin DBX', description: 'Spacious and versatile, perfect for family adventures and outdoor explorations.', price: '$189,000', link: './suv/suv.html' },
+                { model: 'Maserati Levante', description: 'Spacious and versatile, perfect for family adventures and outdoor explorations.', price: '$76,000', link: './suv/suv1.html' },
+                { model: 'Lamborgini Urus', description: 'Spacious and versatile, perfect for family adventures and outdoor explorations.', price: '$218,000', link: './suv/suv2.html' },
+                { model: 'Bentley Bentayga', description: 'Spacious and versatile, perfect for family adventures and outdoor explorations.', price: '$155,000', link: './suv/suv3.html' }
+            ],
+            sports: [
+                { model: 'Mercedes-AMG GT Black Series', description: 'Unleash your passion for speed with thrilling acceleration and dynamic handling.', price: '$325,000', link: './ss/ss.html' },
+                { model: 'Porsche 911', description: 'Unleash your passion for speed with thrilling acceleration and dynamic handling.', price: '$99,200', link: './ss/ss1.html' },
+                { model: 'Ferrari 488', description: 'Unleash your passion for speed with thrilling acceleration and dynamic handling.', price: '$260,200', link: './ss/ss2.html' },
+            ]
+        };
+
+        carTypeSelect.addEventListener('change', function () {
+            const selectedType = carTypeSelect.value;
+            carList.innerHTML = '';
+            carsData[selectedType].forEach(car => {
+                const carItem = document.createElement('li');
+                carItem.innerHTML = `
+                    <h2><a href="${car.link}">${car.model}</a></h2>
+                    <p>${car.description}</p>
+                    <p>Price: ${car.price}</p>
+                `;
+                carList.appendChild(carItem);
+            });
+        });
+        carTypeSelect.dispatchEvent(new Event('change'));
+    </script>
+</body>
+
+</html>
