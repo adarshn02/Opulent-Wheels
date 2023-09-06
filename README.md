@@ -23,7 +23,3 @@ If you'd like to contribute to this project, please fork the repository, make yo
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-You can customize this README further to include any additional details or instructions specific to your project.
